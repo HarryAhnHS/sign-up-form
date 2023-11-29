@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 
-    <!-- Font - 'Poppins' -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200&family=Kaushan+Script&family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,49 +20,63 @@
 
         </div>
         <div class="content-r">
-            <div class="form-header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident odit placeat ratione ullam praesentium hic numquam consequuntur labore, quod dignissimos quia fugit voluptate vel expedita deleniti sed a iure?
-            </div>
             <div class="form-main">
-                <div class="form-input-head">Join the community</div>
-                <form>
+                <div class="form-input-head">Embark on your journey with us</div>
+                <form id="sign-up-form">
                     <div class="input-area">
-                        <label for="first_name">
-                            First Name
-                        </label>
-                        <input type="text" id="first_name" name="first_name" required>
+                        <div class="input-area-box">
+                            <label for="first_name">
+                                First Name
+                            </label>
+                            <input type="text" class="sign-up-input" id="first_name" name="first_name" required>
+                        </div>
                     </div>
                     <div class="input-area">
-                        <label for="last_name">
-                            Last Name
-                        </label>
-                        <input type="text" id="last_name" name="last_name" required>
+                        <div class="input-area-box">
+                            <label for="last_name">
+                                Last Name
+                            </label>
+                            <input type="text" class="sign-up-input" id="last_name" name="last_name" required>
+                        </div>
                     </div>
                     <div class="input-area">
-                        <label for="dob">
-                            Date of Birth
-                        </label>
-                        <input type="date" id="dob" name="dob" required>
+                        <div class="input-area-box">
+                            <label for="dob">
+                                Date of Birth
+                            </label>
+                            <input type="text" class="sign-up-input" id="dob" name="dob" placeholder="DD/MM/YYYY" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" required>
+                        </div>
                     </div>
                     <div class="input-area">
-                        <label for="email">
-                            Email
-                        </label>
-                        <input type="email" id="email" name="email" required>
+                        <div class="input-area-box">
+                            <label for="email">
+                                Email
+                            </label>
+                            <input type="email" class="sign-up-input" id="email" name="email" required>
+                        </div>
                     </div>
                     <div class="input-area">
-                        <label for="pw">
-                            Password
-                        </label>
-                        <input type="password" id="pw" name="pw" required>
+                        <div class="input-area-box">
+                            <label for="pw">
+                                Password
+                            </label>
+                            <input type="password" class="sign-up-input" id="pw" name="pw" required>
+                        </div>
+                    </div>
+                    <div class="input-area">
+                        <div class="input-area-box">
+                            <label for="confirm-pw">
+                                Confirm Password
+                            </label>
+                            <input type="password" class="sign-up-input" id="confirm-pw" name="confirm-pw" required>
+                        </div>
                     </div>
                 </form>
                 <div class="submit-box">
-                    <button type="submit">Sign up</button>
+                    <button id="submit-btn" type="submit" form="sign-up-form" 
+                    onclick="!this.form&&$('#'+$(this).attr('form')).submit()">Sign up</button>
+                    <div class="submit-alt">Already have an account? <a href=#>Log In</a></div>
                 </div>
-            </div>
-            <div class="form-foot">
-                Thank you
             </div>
         </div>
         
