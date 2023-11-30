@@ -45,7 +45,7 @@ img {
     margin-left: 90px;
     display: flex;
     justify-content: flex-start;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
 }
 
@@ -71,18 +71,34 @@ label {
     color: #8e8e8e;
     text-transform: uppercase;
     font-size: 0.9rem;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    transition: all 0.5s;
 }
+
+label.valid-label {
+    color: #8cb369;
+    transition: all 0.5s;
+}
+
+
 input {
     width: 200px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
     font-size: 0.9rem;
+    transition: all 0.5s;
 }
 
 input:focus {
     outline: none;
+}
+
+input.valid-input {
+    color: #8cb369;
+    border-color: #8cb369;
+    transition: all 0.5s;
 }
 
 .input-area {

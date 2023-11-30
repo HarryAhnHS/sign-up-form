@@ -1,16 +1,20 @@
-const inputs = document.querySelectorAll(".sign-up-input");
-
-// Functions to validate each input
-inputs.forEach( function (input) {
-    if (input.id == "first_name" || input.id == "last_name") {
-        input.addEventListener('keyup', () => {
+function validateInput() {
+    const inputs = document.querySelectorAll(".sign-up-input");
+    // Functions to validate each input
+    inputs.forEach( function (input) {
+        if (input.id == "first_name" || input.id == "last_name") {
+            const nameLabel = document.querySelector("label[for=" + input.id + "]")
             if (input.value != "") {
-                input.style['border-color'] = 'green';
+                input.classList.add('valid-input');
+                nameLabel.classList.add('valid-label');
             }
             else {
-                input.style['border-color'] = 'black';
+                input.classList.remove('valid-input');
+                nameLabel.classList.remove('valid-label');
             }
-        });
-        
-    }
-});
+        }
+    
+    });
+}
+
+
