@@ -77,7 +77,7 @@ label {
 }
 
 label.valid-label {
-    color: #8cb369;
+    color: #60d394;
     transition: all 0.5s;
 }
 
@@ -96,8 +96,8 @@ input:focus {
 }
 
 input.valid-input {
-    color: #8cb369;
-    border-color: #8cb369;
+    color: #60d394;
+    border-color: #60d394;
     transition: all 0.5s;
 }
 
