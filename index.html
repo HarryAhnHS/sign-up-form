@@ -17,18 +17,19 @@
 <body>
     <div class="content">
         <div class="content-l">
-
+            <img src="./imgs/lock.jpg">
         </div>
         <div class="content-r">
             <div class="form-main">
                 <div class="form-input-head">Embark on your journey with us</div>
-                <form id="sign-up-form">
+                <form name="signUpForm" id="signUpForm">
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="first_name">
                                 First Name
                             </label>
                             <input type="text" class="sign-up-input" id="first_name" name="first_name" onfocusout="validateInput()" required>
+                            <div id="error_first_name"></div>
                         </div>
                     </div>
                     <div class="input-area">
@@ -37,14 +38,16 @@
                                 Last Name
                             </label>
                             <input type="text" class="sign-up-input" id="last_name" name="last_name" onfocusout="validateInput()" required>
+                            <div id="error_last_name"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
-                            <label for="dob">
-                                Date of Birth
+                            <label for="phone">
+                                Phone Number
                             </label>
-                            <input type="text" class="sign-up-input" id="dob" name="dob" placeholder="DD/MM/YYYY" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" required>
+                            <input type="tel" class="sign-up-input" id="phone" name="phone" onfocusout="validateInput()" required>
+                            <div id="error_phone"></div>
                         </div>
                     </div>
                     <div class="input-area">
@@ -53,6 +56,7 @@
                                 Email
                             </label>
                             <input type="email" class="sign-up-input" id="email" name="email" onfocusout="validateInput()" required>
+                            <div id="error_email"></div>
                         </div>
                     </div>
                     <div class="input-area">
@@ -60,21 +64,22 @@
                             <label for="pw">
                                 Password
                             </label>
-                            <input type="password" class="sign-up-input" id="pw" name="pw" required>
+                            <input type="password" class="sign-up-input" id="pw" name="pw" onfocusout="validateInput()" required>
+                            <div id="error_pw"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
-                            <label for="confirm-pw">
+                            <label for="confirm_pw">
                                 Confirm Password
                             </label>
-                            <input type="password" class="sign-up-input" id="confirm-pw" name="confirm-pw" required>
+                            <input type="password" class="sign-up-input" id="confirm_pw" name="confirm-pw" onfocusout="validateInput()" required>
+                            <div id="error_confirm_pw"></div>
                         </div>
                     </div>
                 </form>
                 <div class="submit-box">
-                    <button id="submit-btn" type="submit" form="sign-up-form" 
-                    onclick="!this.form&&$('#'+$(this).attr('form')).submit()">Sign up</button>
+                    <button id="submit-btn" type="submit" form="signUpForm"><span>Sign up</span></button>
                     <div class="submit-alt">Already have an account? <a href=#>Log In</a></div>
                 </div>
             </div>
