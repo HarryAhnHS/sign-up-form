@@ -57,6 +57,8 @@ function validateInput() {
 
 
 const submit = document.querySelector('#submit-btn');
+const signedUpOverlay = document.querySelector('.sign-up-success');
+const content = document.querySelector('.content');
 submit.addEventListener('click', (e) => {
     console.log('submit')
     e.preventDefault();
@@ -81,7 +83,10 @@ submit.addEventListener('click', (e) => {
 
     if (validAll) {
         console.log('Valid form - submitting')
-        signUpForm.submit();
+        // signUpForm.submit();
+        content.style.display = 'none';
+        signedUpOverlay.classList.remove('disabled');
+        
     }
 
 })
