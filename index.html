@@ -14,10 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="document.body.style.opacity='1'"">
     <div class="content">
         <div class="content-l">
-            <img src="./imgs/lock.jpg">
+            <div id="lock-img">
+                <img src="./imgs/lock.jpg">
+            </div>
         </div>
         <div class="content-r">
             <div class="form-main">
@@ -26,55 +28,55 @@
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="first_name">
-                                First Name
+                                First Name *
                             </label>
                             <input type="text" class="sign-up-input" id="first_name" name="first_name" onfocusout="validateInput()" required>
-                            <div id="error_first_name"></div>
+                            <div class ="errorbox" id="error_first_name"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="last_name">
-                                Last Name
+                                Last Name *
                             </label>
                             <input type="text" class="sign-up-input" id="last_name" name="last_name" onfocusout="validateInput()" required>
-                            <div id="error_last_name"></div>
+                            <div class ="errorbox" id="error_last_name"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="phone">
-                                Phone Number
+                                Phone Number *
                             </label>
                             <input type="tel" class="sign-up-input" id="phone" name="phone" onfocusout="validateInput()" required>
-                            <div id="error_phone"></div>
+                            <div class ="errorbox" id="error_phone"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="email">
-                                Email
+                                Email *
                             </label>
                             <input type="email" class="sign-up-input" id="email" name="email" onfocusout="validateInput()" required>
-                            <div id="error_email"></div>
+                            <div class ="errorbox" id="error_email"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="pw">
-                                Password
+                                Password *
                             </label>
                             <input type="password" class="sign-up-input" id="pw" name="pw" onfocusout="validateInput()" required>
-                            <div id="error_pw"></div>
+                            <div class ="errorbox" id="error_pw"></div>
                         </div>
                     </div>
                     <div class="input-area">
                         <div class="input-area-box">
                             <label for="confirm_pw">
-                                Confirm Password
+                                Confirm Password *
                             </label>
                             <input type="password" class="sign-up-input" id="confirm_pw" name="confirm-pw" onfocusout="validateInput()" required>
-                            <div id="error_confirm_pw"></div>
+                            <div class ="errorbox" id="error_confirm_pw"></div>
                         </div>
                     </div>
                 </form>
@@ -86,14 +88,10 @@
         </div>
     </div>
     <div class="sign-up-success disabled">
-        <div class="signed-up-visual">
-            <img src="imgs/welcome.svg" class="welcome-svg">
-        </div> 
         <div class="signed-up-text">
             <div class="success-text">You're all set.</div>
             <div class="success-text">Thanks for signing up!</div>
         </div>
-        <img src="imgs/asset.svg" class="shape">
     </div>
     <div class="footer">
         &copy; Copyright by @HarryAhnHS 
