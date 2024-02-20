@@ -121,6 +121,7 @@ input {
     align-items: center;
     color: white;
     font-size: 12px;
+    font-weight: 500;
 }
 
 input:focus {
